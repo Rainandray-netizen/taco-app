@@ -1,19 +1,17 @@
-import React from "react"
+import React from 'react'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Redirect
-  } from "react-router-dom"
-import Header from "../Header/Header.js"
-import Home from "../Home/Home.js"
-import Chaos from "../Chaos/Chaos.js"
-import CuratedTacos from "../CuratedTacos/CuratedTacos.js"
-import Favorites from "../Favorites/Favorites.js"
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import Header from '../Header/Header'
+import Home from '../Home/Home'
+import Chaos from '../Chaos/Chaos'
+import CuratedTacos from '../CuratedTacos/CuratedTacos'
+import Favorites from '../Favorites/Favorites'
 
-const App = () =>(
+const App = () => (
   <div>
     <CssBaseline />
     <Router>
