@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
-import Button from '@material-ui/core/Button'
+import GenerateButton from '../GenerateButton/GenerateButton'
+import useStyles from './CuratedTacosStyles'
 
 const CuratedTacos = () => {
+  const classes = useStyles()
+
   const [taco, updateTaco] = useState()
 
   const base = taco && taco.base_layer
@@ -44,14 +47,16 @@ const CuratedTacos = () => {
 
   if (!taco) {
     return (
-      <div>
-        <Button type="button" onClick={curateTaco}>Generate Taco</Button>
+      <div className={classes.buttonDiv}>
+        <GenerateButton text="Curate Me a Taco" functionality={curateTaco} />
       </div>
     )
   }
   return (
     <div>
-      <Button type="button" onClick={curateTaco}>Generate Taco</Button>
+      <div className={classes.buttonDiv}>
+        <GenerateButton text="Curate Me a Taco" functionality={curateTaco} />
+      </div>
       <div>
         <h1>{taco.name}</h1>
         {base

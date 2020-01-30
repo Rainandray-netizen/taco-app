@@ -4,7 +4,7 @@ import useStyles from "./AboutProductStyles.js"
 
 const AboutProduct = () =>{
 
-const classes = useStyles()
+  const classes = useStyles()
 
   const {productName} = useParams()
 

@@ -1,19 +1,24 @@
 import React from 'react'
-import {
-  BrowserRouter as Link,
-} from 'react-router-dom'
-// import Button from '@material-ui/core/button'
+import { Link } from 'react-router-dom'
+import useStyles from './HeaderStyles'
 
-const Header = () => (
-  <header>
-    <Link to="/">Home</Link>
-    {' '}
-    <Link to="/taco-chaos">Taco Chaos</Link>
-    {' '}
-    <Link to="/curated-tacos">Curated Tacos</Link>
-    {' '}
-    <Link to="/favorites">Favorites</Link>
-  </header>
-)
+const Header = () => {
+  const classes = useStyles()
+
+  return (
+    <div>
+      <hr />
+      <header className={classes.headerWrapper}>
+        <div className={classes.header}>
+          <Link to="/">Home</Link>
+          <Link to="/taco-chaos">Taco Chaos</Link>
+          <Link to="/curated-tacos">Curated Tacos</Link>
+          <Link to="/favorites">Favorites</Link>
+        </div>
+      </header>
+      <hr />
+    </div>
+  )
+}
 
 export default Header

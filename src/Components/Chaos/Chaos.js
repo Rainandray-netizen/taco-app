@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
+import ChaosStyles from './ChaosStyles'
+import GenerateButton from '../GenerateButton/GenerateButton'
 
 const Chaos = () => {
   // console.log('Chaos Rendered')
+
+  const classes = ChaosStyles()
 
   const [state, setState] = useState({
     taco: null,
@@ -87,14 +91,22 @@ const Chaos = () => {
 
   if (!taco) {
     return (
-      <div>
-        <button type="button" onClick={curateTaco}>Generate Taco</button>
+      <div className={classes.buttonDiv}>
+        <GenerateButton
+          text="Unleash the Taco!"
+          functionality={curateTaco}
+        />
       </div>
     )
   }
   return (
     <div>
-      <button type="button" onClick={curateTaco}>Generate Taco</button>
+      <div className={classes.buttonDiv}>
+        <GenerateButton
+          text="Unleash the Taco!"
+          functionality={curateTaco}
+        />
+      </div>
       <div>
         <h1>{name}</h1>
         {base
