@@ -25,7 +25,7 @@ const Chaos = () => {
     const recipeArrayFiltered = recipeArrayRaw.filter((line) => line !== '' && line.indexOf('=') !== 0 && line.indexOf('-') !== 0 && line.indexOf('!') !== 0)
     const recipePrintable = recipeArrayFiltered.map((recipeItem, index) => {
       if (index === 0) {
-        return <h1>{recipeItem}</h1>
+        return <h2>{recipeItem}</h2>
       }
       return <p>{recipeItem}</p>
     })
@@ -59,7 +59,7 @@ const Chaos = () => {
     'Boom Shaka Tacos ',
     'Himalayan Mountian Tacos ',
     'Wild Side Tacos ',
-    'Sorrow-Drowning Tacos',
+    'Sorrow-Drowning Tacos ',
   ]
 
   const nameSuffix = [
@@ -107,7 +107,7 @@ const Chaos = () => {
           functionality={curateTaco}
         />
       </div>
-      <div>
+      <div className={classes.recipeDiv}>
         <h1>{name}</h1>
         {base
           && (

@@ -6,7 +6,7 @@ const Header = () => {
   const classes = useStyles()
 
   return (
-    <div>
+    <div className={classes.outerHeader}>
       <hr />
       <header className={classes.headerWrapper}>
         <div className={classes.header}>

@@ -10,26 +10,29 @@ import Home from '../Home/Home'
 import Chaos from '../Chaos/Chaos'
 import CuratedTacos from '../CuratedTacos/CuratedTacos'
 import Favorites from '../Favorites/Favorites'
+import AppStyles from './AppStyles'
 
 const App = () => (
   <div>
     <CssBaseline />
     <Router>
       <Header />
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/taco-chaos">
-          <Chaos />
-        </Route>
-        <Route path="/curated-tacos">
-          <CuratedTacos />
-        </Route>
-        <Route path="/favorites">
-          <Favorites />
-        </Route>
-      </Switch>
+      <div className={AppStyles().backgroundImage}>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/taco-chaos">
+            <Chaos />
+          </Route>
+          <Route path="/curated-tacos">
+            <CuratedTacos />
+          </Route>
+          <Route path="/favorites">
+            <Favorites />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   </div>
 )

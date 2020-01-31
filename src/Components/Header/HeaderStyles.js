@@ -1,6 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
+  outerHeader: {
+    '& hr': {
+      margin: '0px',
+      paddingTop: '5px',
+      paddingBottom: '5px',
+    },
+  },
   headerWrapper: {
     display: 'flex',
     justifyContent: 'center',
@@ -11,7 +18,7 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     alignItems: 'center',
     width: '70vw',
-    height: '80px',
+    height: '10%',
     fontSize: '30px',
     '& a': {
       textDecoration: 'none',

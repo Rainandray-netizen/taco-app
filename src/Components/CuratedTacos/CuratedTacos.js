@@ -18,7 +18,7 @@ const CuratedTacos = () => {
     const recipeArrayFiltered = recipeArrayRaw.filter((line) => line !== '' && line.indexOf('=') !== 0 && line.indexOf('-') !== 0)
     const recipePrintable = recipeArrayFiltered.map((recipeItem, index) => {
       if (index === 0) {
-        return <h3>{recipeItem}</h3>
+        return <h2>{recipeItem}</h2>
       }
       return <p>{recipeItem}</p>
     })
@@ -57,7 +57,7 @@ const CuratedTacos = () => {
       <div className={classes.buttonDiv}>
         <GenerateButton text="Curate Me a Taco" functionality={curateTaco} />
       </div>
-      <div>
+      <div className={classes.recipeDiv}>
         <h1>{taco.name}</h1>
         {base
           && (
