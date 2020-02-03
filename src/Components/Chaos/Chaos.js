@@ -18,6 +18,7 @@ const Chaos = () => {
   const condiment = taco && taco.condiment
   const mixin = taco && taco.mixin
   const shell = taco && taco.shell
+  const seasoning = taco && taco.seasoning
 
   // markdown recipe => jsx
   const recipeConverter = (recipe) => {
@@ -118,6 +119,11 @@ const Chaos = () => {
         {condiment && (
           <div>
             {recipeConverter(condiment.recipe)}
+          </div>
+        )}
+        {seasoning && (
+          <div>
+            {recipeConverter(seasoning.recipe)}
           </div>
         )}
         {mixin && (

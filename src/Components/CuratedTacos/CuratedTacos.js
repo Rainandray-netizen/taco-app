@@ -7,6 +7,8 @@ const CuratedTacos = () => {
 
   const [taco, updateTaco] = useState()
 
+  console.log(taco)
+
   const base = taco && taco.base_layer
   const condiment = taco && taco.condiment
   const mixin = taco && taco.mixin

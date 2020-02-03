@@ -11,6 +11,7 @@ import Chaos from '../Chaos/Chaos'
 import CuratedTacos from '../CuratedTacos/CuratedTacos'
 import Favorites from '../Favorites/Favorites'
 import AppStyles from './AppStyles'
+import SingleRecipe from '../SingleRecipe/SingleRecipe'
 
 const App = () => (
   <div>
@@ -30,6 +31,9 @@ const App = () => (
           </Route>
           <Route path="/favorites">
             <Favorites />
+          </Route>
+          <Route path="/recipes/:layerTypeSlug/:recipeSlug">
+            <SingleRecipe />
           </Route>
         </Switch>
       </div>
